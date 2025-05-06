@@ -1,132 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Word Function Language</title>
+  <meta charset="UTF-8">
+  <title>Word Function Language (.wfl)</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      margin: 0; padding: 0;
       background-color: #000;
       color: #fff;
-    }
-    header {
-      background-color: #111;
-      padding: 2rem;
+      font-family: 'Courier New', Courier, monospace;
+      padding: 20px;
       text-align: center;
     }
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
+    h1 {
+      margin-bottom: 40px;
     }
-    header p {
-      margin: 0.5rem 0 0;
-      font-size: 1.1rem;
-      color: #ccc;
+    .programs {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
     }
-    main {
-      padding: 2rem;
-      max-width: 900px;
-      margin: auto;
-    }
-    h2 {
-      color: #fff;
-      border-bottom: 1px solid #333;
-      padding-bottom: 0.3rem;
-    }
-    code, pre {
-      background-color: #222;
-      color: #0f0;
-      padding: 0.5rem;
-      border-radius: 4px;
-      display: block;
-      white-space: pre-wrap;
-    }
-    textarea {
-      width: 100%;
-      height: 120px;
-      font-family: monospace;
-      font-size: 14px;
-      padding: 0.5rem;
-      margin-top: 0.5rem;
-      border-radius: 4px;
-      border: 1px solid #444;
+    .program-box {
       background-color: #111;
-      color: #0f0;
-    }
-    button {
-      padding: 0.5rem 1rem;
-      margin-top: 0.5rem;
-      font-weight: bold;
-      background-color: #444;
-      color: white;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
+      border: 1px solid #555;
+      padding: 15px;
+      width: 30%;
+      margin: 10px;
+      text-align: left;
     }
     .output {
-      background-color: #111;
-      border-left: 4px solid #0f0;
-      padding: 1rem;
-      margin-top: 1rem;
-      white-space: pre-wrap;
+      margin-top: 10px;
       color: #0f0;
+      white-space: pre-wrap;
     }
-    a {
-      color: #1e90ff;
+    code {
+      display: block;
+      background-color: #222;
+      padding: 10px;
+      margin-top: 10px;
+      white-space: pre;
+      overflow-x: auto;
     }
   </style>
 </head>
 <body>
+  <h1>Word Function Language (.wfl)</h1>
 
-  <header>
-    <h1>🧠 Word Function Language</h1>
-    <p>A lightweight language for text and file processing (.wfl files)</p>
-  </header>
+  <div class="programs">
 
-  <main>
-    <h2>🎯 Purpose</h2>
-    <p>
-      Word Function Language (WFL) is a beginner-friendly scripting language focused on string operations, word analysis, and file-based text logic. No numbers, no syntax headaches—just words.
-    </p>
-
-    <h2>🔤 Language Features</h2>
-    <ul>
-      <li><code>string s = "hello world"</code> – store a string</li>
-      <li><code>file f = "sample.txt"</code> – read a file into memory</li>
-      <li><code>cword s</code> – count words</li>
-      <li><code>csent f</code> – count sentences</li>
-      <li><code>unscramble "meat"</code> – find valid English words</li>
-      <li><code>count "the" f</code> – count specific terms</li>
-      <li><code>removeword "hello" s</code> – delete a word from string</li>
-    </ul>
-
-    <h2>🧪 Try It Out</h2>
-    <p>Enter WFL script below (non-functional demo):</p>
-    <textarea placeholder='Example:&#10;string s = "hello world"&#10;cword s'></textarea>
-    <button onclick="alert('This is a demo. Connect backend for live execution.')">Run</button>
-
-    <div class="output">
-      Output will appear here.
+    <!-- Program 1 -->
+    <div class="program-box">
+      <h2>Program 1: Count Characters</h2>
+      <code>
+string text = "Hello world!"<br>
+cchar text
+      </code>
+      <div class="output">12 characters</div>
     </div>
 
-    <h2>📄 Example Program</h2>
-    <pre><code># Load file and check sentences
-file f = "sample.txt"
+    <!-- Program 2 -->
+    <div class="program-box">
+      <h2>Program 2: Wordle with Pattern</h2>
+      <code>
+wordle "meat" withlength 4 pattern _e__<br>
+      </code>
+      <div class="output">
+team<br>
+mean<br>
+meat
+      </div>
+    </div>
 
-rule lessthan 5 print "Too short"
-rule equal 5 print "FizzBuzz"
-rule morethan 5 print "Too long"
+    <!-- Program 3 -->
+    <div class="program-box">
+      <h2>Program 3: Rule-Based Sentence Analysis</h2>
+      <code>
+file story = "story.txt"<br>
+rule lessthan 5 print "Too short"<br>
+rule morethan 10 print "Too long"<br>
+for sentence in story
+      </code>
+      <div class="output">
+Too short<br>
+A good sentence.<br>
+Too long
+      </div>
+    </div>
 
-for sentence in f
-    </code></pre>
-
-    <h2>📦 Repository</h2>
-    <p>
-      View source code and contribute on <a href="https://github.com/yourusername/wfl" target="_blank">GitHub</a>.
-    </p>
-  </main>
-
+  </div>
 </body>
 </html>
