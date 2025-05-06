@@ -3,29 +3,41 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Custom Language</title>
+  <title>Word Function Language</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0; padding: 0;
-      background-color: #f7f7f7;
-      color: #333;
+      background-color: #000;
+      color: #fff;
     }
     header {
-      background-color: #333;
-      color: white;
-      padding: 1rem 2rem;
+      background-color: #111;
+      padding: 2rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    header p {
+      margin: 0.5rem 0 0;
+      font-size: 1.1rem;
+      color: #ccc;
     }
     main {
       padding: 2rem;
       max-width: 900px;
       margin: auto;
     }
-    h1, h2 {
-      color: #444;
+    h2 {
+      color: #fff;
+      border-bottom: 1px solid #333;
+      padding-bottom: 0.3rem;
     }
     code, pre {
-      background-color: #eee;
+      background-color: #222;
+      color: #0f0;
       padding: 0.5rem;
       border-radius: 4px;
       display: block;
@@ -39,35 +51,44 @@
       padding: 0.5rem;
       margin-top: 0.5rem;
       border-radius: 4px;
-      border: 1px solid #ccc;
+      border: 1px solid #444;
+      background-color: #111;
+      color: #0f0;
     }
     button {
       padding: 0.5rem 1rem;
       margin-top: 0.5rem;
       font-weight: bold;
+      background-color: #444;
+      color: white;
+      border: none;
+      border-radius: 4px;
       cursor: pointer;
     }
     .output {
-      background-color: #fafafa;
-      border-left: 4px solid #888;
+      background-color: #111;
+      border-left: 4px solid #0f0;
       padding: 1rem;
       margin-top: 1rem;
       white-space: pre-wrap;
+      color: #0f0;
+    }
+    a {
+      color: #1e90ff;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>🧠 StringScript</h1>
-    <p>A minimal interpreted language for string and text file manipulation.</p>
+    <h1>🧠 Word Function Language</h1>
+    <p>A lightweight language for text and file processing (.wfl files)</p>
   </header>
 
   <main>
     <h2>🎯 Purpose</h2>
     <p>
-      StringScript is a beginner-friendly scripting language designed to process strings, count words, analyze sentences,
-      and perform Wordle-like operations—all without needing numbers or complex syntax.
+      Word Function Language (WFL) is a beginner-friendly scripting language focused on string operations, word analysis, and file-based text logic. No numbers, no syntax headaches—just words.
     </p>
 
     <h2>🔤 Language Features</h2>
@@ -76,13 +97,13 @@
       <li><code>file f = "sample.txt"</code> – read a file into memory</li>
       <li><code>cword s</code> – count words</li>
       <li><code>csent f</code> – count sentences</li>
-      <li><code>unscramble "meat"</code> – find English words using letters</li>
-      <li><code>count "the" f</code> – count word/letter occurrences</li>
-      <li><code>removeword "hello" s</code> – remove specific word</li>
+      <li><code>unscramble "meat"</code> – find valid English words</li>
+      <li><code>count "the" f</code> – count specific terms</li>
+      <li><code>removeword "hello" s</code> – delete a word from string</li>
     </ul>
 
     <h2>🧪 Try It Out</h2>
-    <p>Enter your script below (non-functional demo):</p>
+    <p>Enter WFL script below (non-functional demo):</p>
     <textarea placeholder='Example:&#10;string s = "hello world"&#10;cword s'></textarea>
     <button onclick="alert('This is a demo. Connect backend for live execution.')">Run</button>
 
@@ -103,7 +124,7 @@ for sentence in f
 
     <h2>📦 Repository</h2>
     <p>
-      View source code and contribute on <a href="https://github.com/yourusername/yourlanguage" target="_blank">GitHub</a>.
+      View source code and contribute on <a href="https://github.com/yourusername/wfl" target="_blank">GitHub</a>.
     </p>
   </main>
 
