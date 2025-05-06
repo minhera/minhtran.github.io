@@ -1,119 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Word Function Language (.wfl)</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Word Function Language</title>
   <style>
     body {
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 0;
       background-color: #000;
       color: #fff;
-      font-family: 'Courier New', Courier, monospace;
-      padding: 20px;
+    }
+    header {
+      background-color: #111;
+      padding: 2rem;
       text-align: center;
     }
-    h1 {
-      margin-bottom: 10px;
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    header p {
+      margin: 0.5rem 0 0;
+      font-size: 1.1rem;
+      color: #ccc;
+    }
+    main {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
     }
     h2 {
-      margin-top: 40px;
-      color: #0ff;
+      color: #fff;
+      border-bottom: 1px solid #333;
+      padding-bottom: 0.3rem;
     }
-    .features {
-      max-width: 800px;
-      margin: auto;
-      text-align: left;
-    }
-    .programs {
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-      margin-top: 40px;
-    }
-    .program-box {
-      background-color: #111;
-      border: 1px solid #444;
-      padding: 15px;
-      width: 30%;
-      margin: 10px;
-      text-align: left;
-    }
-    .output {
-      margin-top: 10px;
+    code, pre {
+      background-color: #222;
       color: #0f0;
+      padding: 0.5rem;
+      border-radius: 4px;
+      display: block;
       white-space: pre-wrap;
     }
-    code {
-      display: block;
-      background-color: #222;
-      padding: 10px;
-      margin-top: 10px;
-      white-space: pre;
-      overflow-x: auto;
+    textarea {
+      width: 100%;
+      height: 120px;
+      font-family: monospace;
+      font-size: 14px;
+      padding: 0.5rem;
+      margin-top: 0.5rem;
+      border-radius: 4px;
+      border: 1px solid #444;
+      background-color: #111;
+      color: #0f0;
+    }
+    button {
+      padding: 0.5rem 1rem;
+      margin-top: 0.5rem;
+      font-weight: bold;
+      background-color: #444;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .output {
+      background-color: #111;
+      border-left: 4px solid #0f0;
+      padding: 1rem;
+      margin-top: 1rem;
+      white-space: pre-wrap;
+      color: #0f0;
+    }
+    a {
+      color: #1e90ff;
+    }
+    .sample-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .sample-item {
+      flex: 1;
+      min-width: 250px;
+      background-color: #111;
+      padding: 1rem;
+      border: 1px solid #333;
+    }
+    .sample-item h3 {
+      color: #0ff;
+      margin-top: 0;
     }
   </style>
 </head>
 <body>
-  <h1>Word Function Language (.wfl)</h1>
 
-  <h2>About the Language</h2>
-  <div class="features">
-    <p><strong>Purpose:</strong> WFL is designed for simple and readable string manipulation, ideal for text processing, language puzzles, and basic linguistic logic without numeric complexity.</p>
-    <p><strong>Philosophy:</strong> Use natural, human-like syntax for defining strings, analyzing them, applying rules, and extracting meaningful patterns or transformations.</p>
-    <p><strong>Key Features:</strong></p>
+  <header>
+    <h1>🧠 Word Function Language</h1>
+    <p>A lightweight language for text and file processing (.wfl files)</p>
+  </header>
+
+  <main>
+    <h2>🎯 Purpose</h2>
+    <p>
+      Word Function Language (WFL) is a beginner-friendly scripting language focused on string operations, word analysis, and file-based text logic. No numbers, no syntax headaches—just words.
+    </p>
+
+    <h2>🔤 Language Features</h2>
     <ul>
-      <li>Simple assignments with <code>string</code> and <code>file</code></li>
-      <li>Character, word, and sentence counters</li>
-      <li>Wordle-style pattern matching with <code>withlength</code>, <code>exclude</code>, and <code>pattern</code></li>
-      <li>Unscramble feature that finds real words from jumbled letters</li>
-      <li>Rule-based sentence analysis using <code>rule</code> and <code>for sentence in</code></li>
-      <li>Word/letter counting with <code>count</code></li>
-      <li>Word removal using <code>removeword</code></li>
-      <li>Output generation with user-defined logic</li>
+      <li><code>string s = "hello world"</code> – store a string</li>
+      <li><code>file f = "sample.txt"</code> – read a file into memory</li>
+      <li><code>cword s</code> – count words</li>
+      <li><code>csent f</code> – count sentences</li>
+      <li><code>unscramble "meat"</code> – find valid English words</li>
+      <li><code>count "the" f</code> – count specific terms</li>
+      <li><code>removeword "hello" s</code> – delete a word from string</li>
     </ul>
-  </div>
 
-  <h2>Sample Programs</h2>
-  <div class="programs">
+    <h2>📄 Example Program</h2>
+    <pre><code># Load file and check sentences
+file f = "sample.txt"
 
-    <!-- Program 1 -->
-    <div class="program-box">
-      <h3>Program 1: Count Characters</h3>
-      <code>
-string text = "Hello world!"<br>
-cchar text
-      </code>
-      <div class="output">12 characters</div>
-    </div>
+rule lessthan 5 print "Too short"
+rule equal 5 print "FizzBuzz"
+rule morethan 5 print "Too long"
 
-    <!-- Program 2 -->
-    <div class="program-box">
-      <h3>Program 2: Wordle with Pattern</h3>
-      <code>
-wordle "meat" withlength 4 pattern _e__<br>
-      </code>
-      <div class="output">
-team<br>
-mean<br>
-meat
+for sentence in f
+    </code></pre>
+
+    <div class="sample-grid">
+
+      <div class="sample-item">
+        <h3>Sample 1: Count Characters</h3>
+        <pre><code>string text = "Hello world!"
+cchar text</code></pre>
+        <div class="output">12 characters</div>
       </div>
-    </div>
 
-    <!-- Program 3 -->
-    <div class="program-box">
-      <h3>Program 3: Rule-Based Sentence Analysis</h3>
-      <code>
-file story = "story.txt"<br>
-rule lessthan 5 print "Too short"<br>
-rule morethan 10 print "Too long"<br>
-for sentence in story
-      </code>
-      <div class="output">
-Too short<br>
-A good sentence.<br>
-Too long
+      <div class="sample-item">
+        <h3>Sample 2: Wordle Pattern Match</h3>
+        <pre><code>wordle "meat" withlength 4 pattern _e__</code></pre>
+        <div class="output">team<br>mean<br>meat</div>
       </div>
+
+      <div class="sample-item">
+        <h3>Sample 3: Sentence Rules</h3>
+        <pre><code>file story = "story.txt"
+rule lessthan 5 print "Too short"
+rule morethan 10 print "Too long"
+for sentence in story</code></pre>
+        <div class="output">Too short<br>A good sentence.<br>Too long</div>
+      </div>
+
     </div>
 
-  </div>
+    <h2>📦 Repository</h2>
+    <p>
+      View source code and contribute on <a href="https://github.com/yourusername/wfl" target="_blank">GitHub</a>.
+    </p>
+  </main>
+
 </body>
 </html>
