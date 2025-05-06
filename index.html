@@ -12,16 +12,26 @@
       text-align: center;
     }
     h1 {
-      margin-bottom: 40px;
+      margin-bottom: 10px;
+    }
+    h2 {
+      margin-top: 40px;
+      color: #0ff;
+    }
+    .features {
+      max-width: 800px;
+      margin: auto;
+      text-align: left;
     }
     .programs {
       display: flex;
       justify-content: space-around;
       flex-wrap: wrap;
+      margin-top: 40px;
     }
     .program-box {
       background-color: #111;
-      border: 1px solid #555;
+      border: 1px solid #444;
       padding: 15px;
       width: 30%;
       margin: 10px;
@@ -45,11 +55,29 @@
 <body>
   <h1>Word Function Language (.wfl)</h1>
 
+  <h2>About the Language</h2>
+  <div class="features">
+    <p><strong>Purpose:</strong> WFL is designed for simple and readable string manipulation, ideal for text processing, language puzzles, and basic linguistic logic without numeric complexity.</p>
+    <p><strong>Philosophy:</strong> Use natural, human-like syntax for defining strings, analyzing them, applying rules, and extracting meaningful patterns or transformations.</p>
+    <p><strong>Key Features:</strong></p>
+    <ul>
+      <li>Simple assignments with <code>string</code> and <code>file</code></li>
+      <li>Character, word, and sentence counters</li>
+      <li>Wordle-style pattern matching with <code>withlength</code>, <code>exclude</code>, and <code>pattern</code></li>
+      <li>Unscramble feature that finds real words from jumbled letters</li>
+      <li>Rule-based sentence analysis using <code>rule</code> and <code>for sentence in</code></li>
+      <li>Word/letter counting with <code>count</code></li>
+      <li>Word removal using <code>removeword</code></li>
+      <li>Output generation with user-defined logic</li>
+    </ul>
+  </div>
+
+  <h2>Sample Programs</h2>
   <div class="programs">
 
     <!-- Program 1 -->
     <div class="program-box">
-      <h2>Program 1: Count Characters</h2>
+      <h3>Program 1: Count Characters</h3>
       <code>
 string text = "Hello world!"<br>
 cchar text
@@ -59,7 +87,7 @@ cchar text
 
     <!-- Program 2 -->
     <div class="program-box">
-      <h2>Program 2: Wordle with Pattern</h2>
+      <h3>Program 2: Wordle with Pattern</h3>
       <code>
 wordle "meat" withlength 4 pattern _e__<br>
       </code>
@@ -72,7 +100,7 @@ meat
 
     <!-- Program 3 -->
     <div class="program-box">
-      <h2>Program 3: Rule-Based Sentence Analysis</h2>
+      <h3>Program 3: Rule-Based Sentence Analysis</h3>
       <code>
 file story = "story.txt"<br>
 rule lessthan 5 print "Too short"<br>
