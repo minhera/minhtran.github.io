@@ -1,0 +1,6 @@
+file sample = test.txt
+count "this" sample
+
+save sample to newtest.txt
+file newsample = newtest.txt
+count "this" newsample

@@ -1,0 +1,9 @@
+string intro = "This is a short sentence."
+
+cchar intro
+cword intro
+csent intro
+used intro
+count "is" intro
+
+intro

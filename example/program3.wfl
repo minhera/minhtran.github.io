@@ -1,0 +1,10 @@
+string space = " "
+unscramble "eta"
+space
+wordle "s" withlength 5 
+space
+wordle "s" withlength 5 exclude worldage 
+space
+wordle "s" withlength 5 pattern s____
+space
+wordle "s" withlength 5 exclude worldage pattern s____

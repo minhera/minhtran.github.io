@@ -1,0 +1,8 @@
+file sample = test.txt
+
+rule lessthan 3 print "Fizz"
+rule equal 4 print "FizzBuzz"
+rule morethan 5 print "Buzz"
+
+for sentence in sample
+

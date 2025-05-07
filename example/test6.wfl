@@ -1,0 +1,19 @@
+file new = test.txt
+
+removeword "is" new
+count "one" new
+count "is" new
+removeword "one" new
+count "one" new
+
+
+string s = "meat"
+unscramble s
+
+rule lessthan 4 print "Short"
+rule equal 4 print "Four"
+rule morethan 4 print "Long"
+
+for sentence in new
+
+save new to nois.txt
